@@ -1,0 +1,29 @@
+<div *ngIf="(items$ | async) as items">
+  <h3>Items Loaded</h3>
+
+  <table class="item-table table table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="item-table__ordinal-number"></th>
+        <th>Title</th>
+        <th>Content</th>
+        <th class="item-table__actions"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items, let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.content}}</td>
+        <td>
+          <button type="button" class="btn btn-sm btn-primary mr-3" (click)="editItem(item)">Ed</button>
+          <button type="button" class="btn btn-sm btn-danger" (click)="removeItem(item)">Rm</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="btn btn-success" (click)="editItem()">Add Item</button>
+</div>
+
+<app-item-edit #itemEditDialog></app-item-edit>

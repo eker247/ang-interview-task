@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { ItemModule } from 'src/app/item/item.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
-import {UserModule} from './user/user.module';
-import {EffectsModule} from '@ngrx/effects';
-import {reducer} from './user/store/users.reducer';
-import {FormsModule} from '@angular/forms';
+import { reducer as itemReducer } from './item/store/item.reducer';
+import { reducer } from './user/store/users.reducer';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ItemModule,
     UserModule,
     FormsModule,
-    StoreModule.forRoot({ users: reducer }, {}),
+    StoreModule.forRoot({ users: reducer, items: itemReducer }, {}),
     EffectsModule.forRoot([]),
   ],
   providers: [],

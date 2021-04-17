@@ -26,15 +26,15 @@ List component should provide:
 List module should use services, mocked API (JSON file is fine) and Ngrx.
 
 ## Requirements
-1. Use Bootstrap for styling
-1. UX design is on your side
-1. Items should be stored in Ngrx
-1. Try to follow existing approach on architecture and modularity
-1. Api calls can be mocked
+1. Use Bootstrap for styling - done
+1. UX design is on your side - used default bootstrap styling
+1. Items should be stored in Ngrx - done
+1. Try to follow existing approach on architecture and modularity - done
+1. Api calls can be mocked - reading from files in assets: user.json, item.json
 1. Clean and extensible code
-1. Persist data in local storage - OPTIONAL
+1. Persist data in local storage - OPTIONAL - done
 1. Fix existing unit test environment and provide unit tests for list module items - OPTIONAL
-1. Commit your progress using some accessible repository
+1. Commit your progress using some accessible repository - done
 
 
 ###In case of any questons feel free to ask.

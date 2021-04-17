@@ -1,0 +1,15 @@
+.list-edit-dialog {
+  position: fixed;
+  top: 0rem;
+  bottom: 0rem;
+  width: 100%;
+  background-color: #000a;
+
+  &__form {
+    background: white;
+    height: 20rem;
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    border-radius: .5rem;
+  }
+}
